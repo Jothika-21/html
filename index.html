@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+</head>
+
+<body class="container">
+    <div>
+        <h1 class="text-center my-4">Table Filter</h1>
+        <form class="btn-group mb-4" id="FilterForm">
+            <select id="Name" class="form-select me-2" aria-label="Default select example">
+                <option selected disabled value="all">Name</option>
+                <option value="Mark">Mark</option>
+                <option value="John">John</option>
+                <option value="Ravi">Ravi</option>
+                <option value="Malar">Malar</option>
+                <option value="Mohana">Mohana</option>
+            </select>
+
+            <select id="Age" class="form-select me-2" aria-label="Default select example">
+                <option selected disabled value="all">Age</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="23">23</option>
+                <option value="22">22</option>
+                <option value="21">21</option>
+            </select>
+            <button type="submit" class="btn-success py-1" id="button">Submit</button>
+        </form>
+
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>FatherName</th>
+                <th class="pe-5">Age</th>
+                <th>Course</th>
+                <th>Persentage</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr data-filter="Mark" data-value="18">
+                <td scope="row">1</td>
+                <td>Mark</td>
+                <td>Ram</td>
+                <td>18</td>
+                <td>BSc.,Physics</td>
+                <td>72%</td>
+            </tr>
+            <tr data-filter="John" data-value="19">
+                <td scope="row">2</td>
+                <td>John</td>
+                <td>George</td>
+                <td>19</td>
+                <td>BCA</td>
+                <td>83%</td>
+            </tr>
+            <tr data-filter="Ravi" data-value="23">
+                <td scope="row">3</td>
+                <td>Ravi</td>
+                <td>Krishnan</td>
+                <td>23</td>
+                <td>BSc.,Chemistry</td>
+                <td>78%</td>
+            </tr>
+            <tr data-filter="Malar" data-value="22">
+                <td scope="row">4</td>
+                <td>Malar</td>
+                <td>Ravindar</td>
+                <td>22</td>
+                <td>BSc.,Tamil</td>
+                <td>75%</td>
+            </tr>
+            <tr data-filter="Mohana" data-value="21">
+                <td scope="row">5</td>
+                <td>Mohana</td>
+                <td>Raj</td>
+                <td>21</td>
+                <td>BBA</td>
+                <td>90%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
